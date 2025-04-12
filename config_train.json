@@ -1,0 +1,39 @@
+{
+    "model": {
+        "in_channels": 4,
+        "out_caps": 1,
+        "mid_channels": 32,
+        "out_channels": 64
+    },
+    "training": {
+        "batch_size": 128,
+        "epochs": 100,
+        "learning_rate": 0.001,
+        "patience": 10,
+        "decay_steps": 1000,
+        "decay_rate": 0.95
+    },
+    "routing": {
+        "method": "em", 
+        "iterations": 3,
+        "beta_v": 1.0, 
+        "beta_a": 1.0  
+    },
+    "visualization": {
+        "plot_every_n_epochs": 1, 
+        "num_plot_samples": 3,
+        "plot_save_subdir": "epoch_plots",
+        "viewport": { 
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+        }
+    },
+    "loss_weights": {
+        "rotation": 1.0,
+        "translation": 0.1,
+        "reprojection": 1.0,
+        "geometric": 0.1
+    }
+} 
